@@ -1,4 +1,4 @@
-<header id="navbar" role="banner" class="navbar navbar-fixed-top">
+<header id="navbar" role="banner" class="navbar">
   <div class="navbar-inner">
   	<div class="container">
   	  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -18,8 +18,11 @@
     		<hgroup id="site-name-slogan">
     		  <?php if ($site_name): ?>
     			<h1>
-    			  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
+    			  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="ash-brand"><?php print $site_name; ?></a>
     			</h1>
+    			<?php if ( $site_slogan ): ?>
+      				<p class="ash-slogan"><?php print $site_slogan; ?></p>
+    			<?php endif; ?>
     		  <?php endif; ?>
     		</hgroup>
   	  <?php endif; ?>
@@ -46,10 +49,6 @@
 <div class="container">
 
   <header role="banner" id="page-header">
-    <?php if ( $site_slogan ): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
-
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
 	
