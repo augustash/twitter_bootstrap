@@ -69,7 +69,7 @@ function twitter_bootstrap_status_messages($vars) {
     $output .= "<div class=\"alert alert-block alert-$type\">\n";
     $output .= "  <a class=\"close\" data-dismiss=\"alert\" href=\"#\">x</a>\n";
     if (!empty($status_heading[$type])) {
-      $output .= '<h4 class="alert-heading">' . $status_heading[$type] . "</h4>\n";
+      $output .= '<h4 class="alert-heading element-invisible">' . $status_heading[$type] . "</h4>\n";
     }
     if (count($messages) > 1) {
       $output .= " <ul>\n";
