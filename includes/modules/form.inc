@@ -240,6 +240,15 @@ function twitter_bootstrap_button($variables) {
   if (!empty($element['#attributes']['disabled'])) {
     $element['#attributes']['class'][] = 'form-button-disabled';
   }
+  
+  // Some elements do not work as buttons
+  $skip = false;
+  if(isset($element['#op']) && $element['#op'] == 'refresh_table') $skip = true;
+  if(isset($element['#process']) && in_array('ajax_process_form', $element['#process'])) $skip = true;
+  if($skip){
+    $element['#attributes']['type'] = 'submit';
+    return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  }
 
   return '<button' . drupal_attributes($element['#attributes']) . '>'. $label .'</button>
   '; // This line break adds inherent margin between multiple buttons
