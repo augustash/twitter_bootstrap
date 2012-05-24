@@ -132,3 +132,10 @@ input.error {
 #site-name-slogan .ash-slogan {
 	font-weight: 200;
 }
+
+/* Views */
+
+.region-sidebar-first .views-exposed-form .views-exposed-widget,
+.region-sidebar-second .views-exposed-form .views-exposed-widget{
+  padding: 0;
+}
