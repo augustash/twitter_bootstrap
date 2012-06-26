@@ -40,7 +40,7 @@ function twitter_bootstrap_theme() {
 function twitter_bootstrap_preprocess_html(&$variables) {
    // Try to load the library
   if (module_exists('twitter_bootstrap_ui')){
-    $library = libraries_load('twitter_bootstrap', 'minified');
+    $library = libraries_load('twitter_bootstrap');
   }  
 }
 
