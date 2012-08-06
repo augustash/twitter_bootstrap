@@ -67,31 +67,31 @@ function twitter_bootstrap_menu_tree(&$variables) {
   return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
 
-function twitter_bootstrap_menu_link(array $variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
+// function twitter_bootstrap_menu_link(array $variables) {
+//   $element = $variables['element'];
+//   $sub_menu = '';
   
-  // Sanitize title
-  $element['#title'] = check_plain($element['#title']);
+//   // Sanitize title
+//   // $element['#title'] = check_plain($element['#title']);
   
-  if ($element['#below']) {
-	// Ad our own wrapper
-	unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul>' . drupal_render($element['#below']) . '</ul>';
+//   // if ($element['#below']) {
+// 	 //   // Ad our own wrapper
+// 	 //   unset($element['#below']['#theme_wrappers']);
+//   //   $sub_menu = '<ul>' . drupal_render($element['#below']) . '</ul>';
 
-    //$element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-	//$element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-	//$element['#attributes']['class'][] = 'dropdown';
-	$element['#localized_options']['html'] = TRUE;
-	//$element['#title'] .= '<b class="caret"></b>';
+//   //   //$element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+// 	 //   //$element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+// 	 //   //$element['#attributes']['class'][] = 'dropdown';
+// 	 //   $element['#localized_options']['html'] = TRUE;
+// 	 // //$element['#title'] .= '<b class="caret"></b>';
 	
-	// auch
-	$element['#href'] = "";
-  }
+// 	 //   // auch
+// 	 //   $element['#href'] = "";
+//   // }
   
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
+//   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+//   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+// }
 
 /**
 * Get all primary tasks including subsets

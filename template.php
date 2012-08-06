@@ -130,22 +130,22 @@ function twitter_bootstrap_preprocess_page(&$variables) {
   $variables['primary_nav'] = FALSE;
   if($variables['main_menu']) {
     // Build links
-    $tree = menu_tree_page_data(variable_get('menu_main_links_source', 'main-menu'));
-    $variables['main_menu'] = twitter_bootstrap_menu_navigation_links($tree);
+    // $tree = menu_tree_page_data(variable_get('menu_main_links_source', 'main-menu'));
+    // $variables['main_menu'] = twitter_bootstrap_menu_navigation_links($tree);
     
-    // Build list
-    $variables['primary_nav'] = theme('twitter_bootstrap_links', array(
-      'links' => $variables['main_menu'],
-      'attributes' => array(
-        'id' => 'main-menu',
-        'class' => array('nav'),
-      ),
-      'heading' => array(
-        'text' => t('Main menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      ),
-    ));
+    // // Build list
+    // $variables['primary_nav'] = theme('twitter_bootstrap_links', array(
+    //   'links' => $variables['main_menu'],
+    //   'attributes' => array(
+    //     'id' => 'main-menu',
+    //     'class' => array('nav'),
+    //   ),
+    //   'heading' => array(
+    //     'text' => t('Main menu'),
+    //     'level' => 'h2',
+    //     'class' => array('element-invisible'),
+    //   ),
+    // ));
   }
   
   // Secondary nav
